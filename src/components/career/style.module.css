@@ -1,0 +1,10 @@
+/* div{
+    background-color: yellow;
+} */
+
+@media screen and (max-width: 768px) {
+    div{
+        flex-direction: row;
+        gap: 2rem;
+    }
+}

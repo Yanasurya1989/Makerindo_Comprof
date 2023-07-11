@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Montserrat;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.hero-title,  .montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.app-logo {
+  width: 30px;
+}
+
+.hero {
+  height: calc(100vh - 65px);
+
+  &::after{
+    content: '';
+    height: 80%;
+    width: 50px;
+    background-color: #DD3B3B;
+    position: absolute;
+    right: 0;
+  }
+
+  .hero-backdrop{
+    position: absolute;
+    left: -2rem;
+    top: 10vh;
+    font-size: 55vh;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    line-height: 80%;
+    text-align: justify;
+    width: 100vw;
+    overflow: hidden;
+    opacity: .04;
+  }
+  
+  .hero-subtitle {
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    font-stretch: extra-expanded;
+  }
+}
+
+
+.divider-socials::before {
+  width: 4rem;
+}
+
+.divider-socials {
+  width: 55vw;
+}
+
+.divider-socials::before, .divider-socials::after {
+  opacity: 1;
+  background-color: #0a0a0a;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(266.09deg, #A123A4 -8.03%, rgba(24, 136, 218, 0.730208) 119%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+#gallery {
+  .my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    flex-direction: row;
+    margin-left: -1rem; /* gutter size offset */
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 1rem; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my-masonry-grid_column > img { /* change div to reference your elements you put in <Masonry> */
+    
+    margin-bottom: 1rem;
+  }
+}
+
+#products {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 80%;
+    object-fit: scale-down;
+  }
+}
+
+#news {
+  // .text-backdrop {
+  //   position: absolute;
+  //   left: -2rem;
+  //   top: 0;
+  //   bottom: 0;
+  //   font-size: 25vh;
+  //   font-weight: bold;
+  //   font-family: Montserrat, sans-serif;
+  //   line-height: 80%;
+  //   text-align: justify;
+  //   width: 100vw;
+  //   overflow: hidden;
+  //   opacity: .3;
+  // }
+}
