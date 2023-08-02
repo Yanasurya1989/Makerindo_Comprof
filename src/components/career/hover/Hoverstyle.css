@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  /* border: 1px solid #ccc; */
+  /* text-align: center; */
+  padding: 20px;
+}
+
+#product{
+  display: flex;
+  /* text-align: center; */
+}
+
+.hidden-content {
+  /* display: none; */
+  position: absolute;
+  /* top: 10%;
+  left: 22%;
+  width: 56%; */
+  /* text-align: center; */
+  height: 100%;
+  background-color: #00000056;
+  padding: 50% 25% 50% 25%;
+  display: flex;
+  border: 1px solid #ccc;
+
+}
+
+.hidden-content button{
+  align-items: center;
+  text-align: center;
+}
+
+/* .img-product:hover{
+  background: red;
+} */
+
+.product{
+  text-align: center;
+}
+
+.hoverable:hover + .hidden-content {
+  display: block;
+}

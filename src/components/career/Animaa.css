@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    /* height: 100vh; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* background-color: #f0f0f0; */
+    /* transition: background-color 0.3s ease; */
+  }
+  
+  .scrolledKiri, .scrolledKanan{
+    /* background-color: #ffcccb; */
+    opacity: 0;
+    transform: translate(-90px, 0);
+    transition: 0.40s;
+  }
+
+  .scrolledKanan {
+    /* background-color: #6d6ffa;  */
+    transform: translate(-90px, 0);
+    transition: 0.40s;
+  }
+
+  .scrolledBawah {
+    /* background-color: #6d6ffa;  */
+    transform: translate(-90py, 0);
+    transition: 0.40s;
+  }
+
+  .scrolledDiv{
+    background-color: greenyellow;
+  }
+  

@@ -35,7 +35,7 @@ export default function GalleryLg() {
           thumb: imgMobile,
       },
       {
-          id: 'desktop-programming',
+          id: 'desktopp-programming',
           size: 'auto',
           src: imgDesktop,
           thumb: imgDesktop,
@@ -79,18 +79,30 @@ export default function GalleryLg() {
   }, []);
 
   const getItems = useCallback(() => {
-      return items.map((item) => {
-          return (
-              <div
-                  key={item.id}
-                  data-lg-size={item.size}
-                  className="gallery-item"
-                  data-src={item.src}
-              >
-                  <img className="img-responsive" src={item.thumb} />
-              </div>
-          );
-      });
+        // fetching start
+  const [data, setData] = useState(null);
+
+    useEffect(() => {
+    // Penggunaan useEffect akan memastikan pemanggilan API hanya terjadi sekali saat komponen dimuat.
+    axios.get(`${import.meta.env.VITE_APP_DOMAIN}/newsroom`)
+        .then((response) => setData(response.data))
+        .catch((error) => console.error('Error fetching data:', error));
+    }, []); 
+    // fetching end
+
+    console.info(data)
+    return items.map((item) => {
+        return (
+            <div
+                key={item.id}
+                data-lg-size={item.size}
+                className="gallery-item"
+                data-src={item.src}
+            >
+                <img className="img-responsive" src={item.thumb} />
+            </div>
+        );
+    });
   }, [items]);
 
   useEffect(() => {

@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    /* justify-content: space-between; */
+  }
+  
+  .item {
+    padding: 9%;
+    /* background-color: #f0f0f0; */
+  }
+
+  .item:hover {
+    background-color: red;
+  }
+
+  button .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: red;
+  }
+
+.ulcar{
+    display: flex;
+  }
+
+.ulcar li{
+    justify-content: space-between;
+  }
+  

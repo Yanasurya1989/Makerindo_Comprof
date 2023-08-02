@@ -8,26 +8,47 @@ import imgMachine from '../assets/img/gallery/machine-learning.png';
 import imgProduct from '../assets/img/gallery/product-design.png';
 import imgUi from '../assets/img/gallery/ui-ux.png';
 import imgWeb from '../assets/img/gallery/web-programming.png';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
 
 export default function Gallery() {
+  // My fetch code start
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Penggunaan useEffect akan memastikan pemanggilan API hanya terjadi sekali saat komponen dimuat.
+    axios.get(`${import.meta.env.VITE_APP_DOMAIN}/our-competency`)
+      .then((response) => setData(response.data))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []); 
+  
+
+  console.log(data)
   return (
-    <section id='gallery' className="w-full flex flex-row relative">
+    <section id='gallery' className="w-full flex flex-row relative pt-20">
       <div className="gallery-title absolute -left-4 -top-4 lg:left-0 lg:top-0 lg:bottom-6 rotate-180" style={{ writingMode: 'vertical-rl' }}>
-        <h2 className="font-bold text-4xl lg:text-5xl uppercase w-full text-gradient-primary ">
-          Our Competency
+        <h2 className="animate__animated animate__fadeIn font-bold text-4xl lg:text-5xl uppercase w-full text-gradient-primary ">
+          {data?.title}
         </h2>
       </div>
-      <div className="gallery-content lg:px-[4rem] px-8 md:px-16">
+      <div className="gallery-content lg:px-[4rem] px-8 md:px-16 animate__animated animate__fadeInUp">
         <div className="flex flex-col md:flex-row mb-4 gap-1 lg:gap-3 lg:h-[80vh] overflow-y-hidden">
-          <div className=" w-full lg:w-3/12 h-full">
+          {/* {data && data.comptency.map((data, index) => ( */}
+
+            <div className=" w-full lg:w-3/12 h-full">
             <Masonry
             breakpointCols={1}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column">
+              {/* <img src={data.image} alt="" className='rounded-sm lg:rounded-xl'/> */}
               <img src={imgWeb} alt="" className='rounded-sm lg:rounded-xl'/>
               <img src={imgMobile} alt="" className='rounded-sm lg:rounded-xl'/>
             </Masonry>
-          </div>
+            </div>
+
+          {/* ))} */}
+          
           <div className="w-full lg:w-6/12 h-full">
             <Masonry
             breakpointCols={1}

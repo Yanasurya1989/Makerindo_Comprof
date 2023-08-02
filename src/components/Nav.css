@@ -1,0 +1,81 @@
+.navis ul{
+    display: flex;
+    
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+.menu-toggle span:nth-child(2){
+    /* background: red; */
+    transform-origin: 0 0;
+}
+
+/* hamburger menu animation */
+
+.menu-toggle span:nth-child(4){
+    /* background: red; */
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: blueviolet;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: blueviolet;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(250, 217, 176);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 768px){
+    .menu-toggle{
+        display: flex;
+    }
+    .navis{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+    .navbar-end ul{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        background-color: black;
+    }
+}
+

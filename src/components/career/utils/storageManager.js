@@ -4,7 +4,8 @@ const career = [
         name: 'nama',
         usia: 'usia',
         pendidikan: 'pendidikan',
-        telp: 'telp'
+        telp: 'telp',
+        taemsetem: 'taemsetem'
     }
 ]
 
