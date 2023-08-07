@@ -20,6 +20,9 @@ import Anim from './components/career/Anim'
 import View from './components/career/felex/View'
 import Hover from './components/career/hover/Hoverview'
 import Hide from './components/career/felex/HideScrolling'
+import Setphone from './components/career/setphone/Setphone'
+import Zoom from './components/career/zoomefect/nidex'
+import WA from './components/career/message/Viewform'
 import { 
   useQueryClient,
   QueryClient,
@@ -88,6 +91,18 @@ const router = createBrowserRouter([
   {
     path: "/vacancy/:id",
     element: <Career />,
+  },
+  {
+    path: "/setphone",
+    element: <Setphone />,
+  },
+  {
+    path: "/zoom",
+    element: <Zoom />,
+  },
+  {
+    path: "/form",
+    element: <WA />,
   },
 ]);
 

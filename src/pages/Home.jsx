@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <div id="fullpage">
-        <div className="section active"><Hero tagline="Build Solution Without Exception"/></div>
+        <div className="section active"><Hero /></div>
         <div className="section"><About/></div>
         <div className="section"><Gallery/></div>
         <div className="section"><Products/></div>

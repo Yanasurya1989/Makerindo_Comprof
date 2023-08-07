@@ -35,7 +35,8 @@ export default function Socials() {
     // fetching end
 
   return (
-    <div className={`container ${isScrolled ? 'scrolledKiri' : ''} flex flex-col w-full border-opacity-50 -translate-y-12 z-50 absolute left-0`}>
+    // <div className={`container ${isScrolled ? 'scrolledKiri' : ''} flex flex-col w-full border-opacity-50 -translate-y-12 z-50 absolute left-0`}>
+    <div className="flex flex-col w-full border-opacity-50 -translate-y-12 z-50 absolute left-0">
       <div className="divider divider-socials uppercase">
         {data ? data.socialMedia.map((data, index) => (
           <a key={index} href={data.url} 

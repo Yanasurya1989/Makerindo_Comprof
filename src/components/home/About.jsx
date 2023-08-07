@@ -70,9 +70,9 @@ export default function About() {
       <>
         <div className="about-title flex justify-center items-center h-screen hidden md:flex  animate__animated animate__backInUp h-[130vh] pt-0">
           <div>
-            <h1 className="uppercase text-center font-bold lg:text-8xl text-gradient-primary">
+            {/* <h1 className="uppercase text-center font-bold lg:text-8xl text-gradient-primary">
               About Us
-            </h1> 
+            </h1>  */}
             {/* {
               isVisibleTitle &&(
               )
@@ -95,15 +95,15 @@ export default function About() {
         </div>
       </>       
       
-      <div className="about-content flex flex-col justify-center items-center h-screen hidden md:flex">
-        <h1 className="uppercase text-center font-bold lg:text-[6rem] text-gradient-primary mb-6">
+      {/* <div className="about-content flex flex-col justify-center items-center h-screen hidden md:flex">
+        <h1 className="uppercase text-center font-bold lg:text-[6rem] sm:text-[2rem] text-gradient-primary mb-6">
           About Us
         </h1>
           {data?.description}
-      </div>
+      </div> */}
       <div className="about-counter flex flex-col justify-center items-center h-[100vh] relative animate__animated animate__zoomInUp">
         <div className="about-counter-content relative">
-          <h1 className="text-center lg:text-left z-10 absolute lg:-top-20 lg:-right-5 font-bold lg:text-[8rem] uppercase text-gradient-primary lg:opacity-40 mb-3 md:mt-12 ">About Us</h1>
+          <h1 className="text-center lg:text-left z-10 absolute lg:-right-5 font-bold lg:text-[8rem] uppercase text-gradient-primary lg:opacity-40 mb-3npm run">About Us</h1>
           <p className="about-description z-20 text-center mb-12 text-md mx-35">
             {data?.description}
           </p>

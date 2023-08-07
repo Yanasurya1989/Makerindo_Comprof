@@ -63,7 +63,7 @@ export default function Products() {
           
         {data && data.product.map((data, index) => (
           <SwiperSlide key={index}>
-            <img  src={data?.image} alt="" className='img-product'/>
+            <img  src={data?.image} alt="" className='masonOne img-product'/>
             {isHovering && <a 
               href={data.link}
               target='_blank'

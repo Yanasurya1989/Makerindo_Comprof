@@ -41,7 +41,8 @@ export default function Hero({ tagline }) {
   return (    
     <>
       <section id="hero" className="hero">
-      <span className={`${isScrolled ? 'scrolledKanan' : ''} hero-backdrop z-10 animate_animated animate__backOutRight`}>MAKE<br />RINDO</span>
+      <span className="hero-backdrop z-10 animate_animated animate__backOutRight">MAKE<br />RINDO</span>
+      {/* <span className={`${isScrolled ? 'scrolledKanan' : ''} hero-backdrop z-10 animate_animated animate__backOutRight`}>MAKE<br />RINDO</span> */}
       <div className="hero-content flex-col md:flex-col-reverse mx-0 lg:flex-row-reverse justify-between w-full z-50">
         <Swiper
           pagination={{
@@ -63,15 +64,18 @@ export default function Hero({ tagline }) {
           className="mySwiper mb-4">
             {data && data.slider.map((data, index) => (
               <SwiperSlide key={index} className={`container ${isScrolled ? 'scrolledKanan' : ''}`}>
-              <img src={data?.image} alt="" className='max-w-sm rounded-lg shadow-2xl max-h-screen mx-auto hidden md:block'/>
+              <img src={data?.image} alt="" className='masonOne max-w-sm rounded-lg shadow-2xl max-h-screen mx-auto  md:block'/>
             </SwiperSlide>
             ))}             
         </Swiper>
 
-        <div className="hero-text text-left md:text-center ">          
-          <h1 className={`container ${isScrolled ? 'scrolledKiri' : ''} text-6xl md:text-8xl font-black hero-title uppercase`}>{data?.title?.split(' ')[0]}</h1>
-          <h1 className={`container ${isScrolled ? 'scrolledKiri' : ''} text-4xl md:text-7xl font-black text-white hero-subtitle uppercase`}>{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1>
-          <p className={`container ${isScrolled ? 'scrolledKiri' : ''} p-6 hero-tagline uppercase`}>{data?.subtitle}</p>
+        <div className="hero-text text-left md:text-center sm:w-auto p-0">          
+          <h1 className="text-6xl md:text-8xl sm:text-4xl font-black hero-title uppercase">{data?.title?.split(' ')[0]}</h1>
+          {/* <h1 className={`container ${isScrolled ? 'scrolledKiri' : ''} text-6xl md:text-8xl sm:text-8xl font-black hero-title uppercase`}>{data?.title?.split(' ')[0]}</h1> */}
+          <h1 className="text-4xl md:text-7xl sm:text-7xl font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1>
+          {/* <h1 className="text-4xl md:text-7xl sm:text-7xl font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1> */}
+          {/* <p className={`container ${isScrolled ? 'scrolledKiri' : ''}  hero-tagline uppercase`}>{data?.subtitle}</p> */}
+          <p className="hero-tagline uppercase">{data?.subtitle}</p>
         </div>
       </div>
     </section>

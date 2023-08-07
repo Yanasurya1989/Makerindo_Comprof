@@ -29,7 +29,7 @@ const ApplyCreateModal = ({handleFormValidate, handleFormOnChange, show, handleC
             setError("");
         }
         else {
-          setError("format nomer telpon tidak valid");
+          setError("Format number is not valid");
           return false;
         }
     }

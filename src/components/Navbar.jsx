@@ -85,7 +85,7 @@ export default function Navbar({appLogo}) {
           <span></span>
         </div> */}
         
-        <div className="dropdown dropdown-end">
+        <div className="mx-auto dropdown dropdown-end">
           <button tabIndex={0} className="lg:hidden btn btn-circle" onClick={list}>
             <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
           </button>

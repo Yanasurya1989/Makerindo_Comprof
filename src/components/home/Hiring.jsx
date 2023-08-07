@@ -76,7 +76,7 @@ export default function Hiring() {
       >        
         <div className="card w-full">
           <figure className="p-1">
-            <img src={image} alt="Shoes" className="rounded-md" />
+            <img src={image} alt="Shoes" className="masonOne rounded-md" />
           </figure>
           <div className="card-body items-start px-0 py-3">
             <h2 className="card-title font-bold text-xl montserrat">{title}</h2>

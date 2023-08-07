@@ -43,7 +43,7 @@ export default function News() {
           className="mySwiper mb-4">
             {data ? data.news.map((data, index) =>(
               <SwiperSlide key={index} className="flex flex-col lg:flex-row items-center lg:w-[50vw]">
-                <img src={data.image} alt="" className='img-product h-[50vh] w-full lg:h-[70vh] lg:w-[16rem] object-cover'/>
+                <img src={data.image} alt="" className='masonOne img-product h-[50vh] w-full lg:h-[70vh] lg:w-[16rem] object-cover'/>
                 <div className="h-full p-4 lg:p-12">
                   <div className="my-auto">
                     <h3 className="font-bold text-lg mb-2 lg:text-4xl lg:mb-8">{data.title}</h3>

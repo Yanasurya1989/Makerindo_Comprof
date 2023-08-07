@@ -10,6 +10,7 @@ import imgUi from '../assets/img/gallery/ui-ux.png';
 import imgWeb from '../assets/img/gallery/web-programming.png';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import '../career/zoomefect/zoom.css';
 
 
 export default function Gallery() {
@@ -24,7 +25,7 @@ export default function Gallery() {
   }, []); 
   
 
-  console.log(data)
+  // console.log(data.comptency[0])
   return (
     <section id='gallery' className="w-full flex flex-row relative pt-20">
       <div className="gallery-title absolute -left-4 -top-4 lg:left-0 lg:top-0 lg:bottom-6 rotate-180" style={{ writingMode: 'vertical-rl' }}>
@@ -33,20 +34,18 @@ export default function Gallery() {
         </h2>
       </div>
       <div className="gallery-content lg:px-[4rem] px-8 md:px-16 animate__animated animate__fadeInUp">
-        <div className="flex flex-col md:flex-row mb-4 gap-1 lg:gap-3 lg:h-[80vh] overflow-y-hidden">
+        <div className="mason flex flex-col md:flex-row mb-4 gap-1 lg:gap-3 lg:h-[80vh] overflow-y-hidden">
           {/* {data && data.comptency.map((data, index) => ( */}
-
             <div className=" w-full lg:w-3/12 h-full">
             <Masonry
             breakpointCols={1}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column">
               {/* <img src={data.image} alt="" className='rounded-sm lg:rounded-xl'/> */}
-              <img src={imgWeb} alt="" className='rounded-sm lg:rounded-xl'/>
-              <img src={imgMobile} alt="" className='rounded-sm lg:rounded-xl'/>
+              <img src={imgWeb} alt="" className='masonOne rounded-sm lg:rounded-xl'/>
+              <img src={imgMobile} alt="" className='masonOne rounded-sm lg:rounded-xl'/>              
             </Masonry>
             </div>
-
           {/* ))} */}
           
           <div className="w-full lg:w-6/12 h-full">
@@ -58,11 +57,11 @@ export default function Gallery() {
               breakpointCols={2}
               className="my-masonry-grid"
               columnClassName="my-masonry-grid_column">
-                <img src={imgUi} alt="" className='rounded-sm lg:rounded-xl'/>
-                <img src={imgMachine} alt="" className='rounded-sm lg:rounded-xl'/>
-                <img src={imgProduct} alt="" className='rounded-sm lg:rounded-xl'/>
+                <img src={imgUi} alt="" className='masonThree rounded-sm lg:rounded-xl'/>
+                <img src={imgMachine} alt="" className='masonOne rounded-sm lg:rounded-xl'/>
+                <img src={imgProduct} alt="" className='masonOne rounded-sm lg:rounded-xl'/>
               </Masonry>
-              <img src={imgEmbedded} alt="" className='rounded-sm lg:rounded-xl'/>
+              <img src={imgEmbedded} alt="" className='masonOne rounded-sm lg:rounded-xl'/>
             </Masonry>
           </div>
           <div className=" w-full lg:w-3/12 h-full">
@@ -70,8 +69,8 @@ export default function Gallery() {
             breakpointCols={1}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column">
-              <img src={imgDesktop} alt="" className='rounded-sm lg:rounded-xl'/>
-              <img src={imgIot} alt="" className='rounded-sm lg:rounded-xl'/>
+              <img src={imgDesktop} alt="" className='masonOne rounded-sm lg:rounded-xl'/>
+              <img src={imgIot} alt="" className='masonOne rounded-sm lg:rounded-xl'/>
             </Masonry>
           </div>
         </div>
