@@ -23,6 +23,7 @@ import Hide from './components/career/felex/HideScrolling'
 import Setphone from './components/career/setphone/Setphone'
 import Zoom from './components/career/zoomefect/nidex'
 import WA from './components/career/message/Viewform'
+import Dropdown from './components/career/drpodown/Epp'
 import { 
   useQueryClient,
   QueryClient,
@@ -103,6 +104,10 @@ const router = createBrowserRouter([
   {
     path: "/form",
     element: <WA />,
+  },
+  {
+    path: "/dropdown",
+    element: <Dropdown />,
   },
 ]);
 

@@ -194,7 +194,7 @@ export default function Contact() {
               ></textarea>
             </div>
             <button type="submit" className="btn btn-block text-center rounded-none border-black border-1 hover:border-black hover:bg-transparent bg-transparent col-span-2">SEND</button> */}
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3513358379514!2d107.65594292381124!3d-6.967814368222427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9465bf21013%3A0x52be50500715e36c!2sPT.%20Makerindo%20Prima%20Solusi!5e0!3m2!1sid!2sid!4v1690968191636!5m2!1sid!2sid" width="600" height="550"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3513358379514!2d107.65594292381124!3d-6.967814368222427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9465bf21013%3A0x52be50500715e36c!2sPT.%20Makerindo%20Prima%20Solusi!5e0!3m2!1sid!2sid!4v1690968191636!5m2!1sid!2sid" width="100%" height="550"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           
           {/* <button type="submit" className="btn btn-block text-center rounded-none border-black border-1 hover:border-black hover:bg-transparent bg-transparent col-span-2">SEND</button> */}

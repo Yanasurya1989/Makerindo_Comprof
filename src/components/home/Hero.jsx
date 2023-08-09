@@ -70,9 +70,9 @@ export default function Hero({ tagline }) {
         </Swiper>
 
         <div className="hero-text text-left md:text-center sm:w-auto p-0">          
-          <h1 className="text-6xl md:text-8xl sm:text-4xl font-black hero-title uppercase">{data?.title?.split(' ')[0]}</h1>
+          <h1 className="text-6xl md:text-8xl sm:text-sm font-black hero-title uppercase">{data?.title?.split(' ')[0]}</h1>
           {/* <h1 className={`container ${isScrolled ? 'scrolledKiri' : ''} text-6xl md:text-8xl sm:text-8xl font-black hero-title uppercase`}>{data?.title?.split(' ')[0]}</h1> */}
-          <h1 className="text-4xl md:text-7xl sm:text-7xl font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1>
+          <h1 className="text-4xl md:text-7xl sm:text-sm font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1>
           {/* <h1 className="text-4xl md:text-7xl sm:text-7xl font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1> */}
           {/* <p className={`container ${isScrolled ? 'scrolledKiri' : ''}  hero-tagline uppercase`}>{data?.subtitle}</p> */}
           <p className="hero-tagline uppercase">{data?.subtitle}</p>

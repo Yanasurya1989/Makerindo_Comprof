@@ -4,6 +4,8 @@ import Career from "./career/Career"
 import App from "../App"
 import { Helmet } from "react-helmet"
 import './Nav.css'
+import Dropdown from '../components/career/drpodown/Dropdown'
+import '../components/career/drpodown/Style.css';
 
 export default function Navbar({appLogo}) {
   const [isShow, setIsShow] = useState(false);
@@ -42,13 +44,20 @@ export default function Navbar({appLogo}) {
         <a href="#contact"
           className="font-light uppercase">
             Contact
-        </a>
+        </a>        
       </li>
       <li>
-        <a href="#career"
+        {/* <a href="#career"
           className="font-light uppercase">
             Career
-        </a>
+        </a> */}
+        {/* <select value={selectedOption} onChange={handleSelectChange}>
+          {<option value=""></option>}
+        </select> */}
+        <Dropdown title="career">
+          <a className="dropdown-item" href="#career">Internship | </a><br />
+          <a className="dropdown-item" href="#career">Employee</a>            
+        </Dropdown>
       </li>
     </>
   )
@@ -56,7 +65,18 @@ export default function Navbar({appLogo}) {
   function list(){
     setIsShow(!isShow)
     console.log('show')
-}
+  }
+
+  // const option = [
+  //   {value: 'option1', label: 'INTERNSHIIP'},
+  //   {value: 'option2', label: 'EMPLOYEE'}
+  // ];
+
+  // const [selectedOption, setSelectedOption] = useState('');
+
+  // const handleSelectChange = (event) => {
+  //   setSelectedOption(event.target.value);
+  // };
 
   return (
     <>
