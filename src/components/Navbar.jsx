@@ -47,17 +47,17 @@ export default function Navbar({appLogo}) {
         </a>        
       </li>
       <li>
-        {/* <a href="#career"
+        <a href="#career"
           className="font-light uppercase">
             Career
-        </a> */}
+        </a>
         {/* <select value={selectedOption} onChange={handleSelectChange}>
           {<option value=""></option>}
         </select> */}
-        <Dropdown title="career">
+        {/* <Dropdown title="career">
           <a className="dropdown-item" href="#career">Internship | </a><br />
           <a className="dropdown-item" href="#career">Employee</a>            
-        </Dropdown>
+        </Dropdown> */}
       </li>
     </>
   )

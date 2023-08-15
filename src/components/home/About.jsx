@@ -68,17 +68,17 @@ export default function About() {
   return (
     <section id="about">
       <>
-        <div className="about-title flex justify-center items-center h-screen hidden md:flex  animate__animated animate__backInUp h-[130vh] pt-0">
+        <div className="about-title flex justify-center items-center h-screen hidden md:flex  animate__animated animate__backInUp h-[130vh]  py-1.5 md:mt-4">
           <div>
-            {/* <h1 className="uppercase text-center font-bold lg:text-8xl text-gradient-primary">
-              About Us
-            </h1>  */}
+            <h1 className="uppercase text-center font-bold lg:text-8xl text-gradient-primary">
+              {/* About Us */}
+            </h1> 
             {/* {
               isVisibleTitle &&(
               )
             } */}
-            {
-              isVisible && (
+            {/* {
+               isVisible && ( */}
                 <div className="about-video flex flex-col justify-center items-center h-screen md:my-6">
                   <h1 className="uppercase text-center font-bold text-4xl text-gradient-primary mb-1 md:hidden">
                     About Us
@@ -87,10 +87,11 @@ export default function About() {
                   <Youtube
                     videoId={data?.videoId}
                     opts={aboutVideoOpts}
-                    iframeClassName="w-[100vh] lg:h-[90vh] lg:w-[80vw]"
+                    iframeClassName="w-[90vh] lg:h-[90vh] lg:w-[80vw] md:h"
                   />
-                </div>)      
-            }
+                </div>
+                {/* )       */}
+            {/* } */}
           </div>
         </div>
       </>       
@@ -101,10 +102,12 @@ export default function About() {
         </h1>
           {data?.description}
       </div> */}
-      <div className="about-counter flex flex-col justify-center items-center h-[100vh] relative animate__animated animate__zoomInUp">
+      <div className="about-counter flex flex-col justify-center items-center h-[50vh] md:h-[70] relative animate__animated animate__zoomInUp mb-5 pb-10 md:pb-30">
         <div className="about-counter-content relative">
-          <h1 className="text-center lg:text-left z-10 absolute lg:-right-5 font-bold lg:text-[8rem] uppercase text-gradient-primary lg:opacity-40 mb-3npm run">About Us</h1>
-          <p className="about-description z-20 text-center mb-12 text-md mx-35">
+          <div className="absolute top-10 bottom-0 h-full flex items-center w-full">
+            <h1 className="text-center lg:text-left absolute lg:-right-5 font-bold lg:text-[8rem] uppercase text-gradient-primary opacity-40 text-[20vh] lg:text-[30vh]">About Us</h1>
+          </div>
+          <p className="about-description z-20 text-center mb-12 text-md mx-35 sm:mt-3">
             {data?.description}
           </p>
           <h2 className="text-2xl font-bold uppercase mb-8">

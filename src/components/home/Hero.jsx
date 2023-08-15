@@ -19,31 +19,32 @@ export default function Hero({ tagline }) {
   }, []); 
   // fetching end
   
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 5) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 5) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //   };
     
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
     
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
   
   
   return (    
     <>
-      <section id="hero" className="hero">
-      <span className="hero-backdrop z-10 animate_animated animate__backOutRight">MAKE<br />RINDO</span>
+      <section id="hero" className="hero ">
+      <span className="hero-backdrop">MAKE<br />RINDO</span>
       {/* <span className={`${isScrolled ? 'scrolledKanan' : ''} hero-backdrop z-10 animate_animated animate__backOutRight`}>MAKE<br />RINDO</span> */}
-      <div className="hero-content flex-col md:flex-col-reverse mx-0 lg:flex-row-reverse justify-between w-full z-50">
+      {/* <div className="hero-content flex-col md:flex-col-reverse mx-0 lg:flex-row-reverse justify-between w-full z-50"> */}
+      <div className="hero-content flex-row-reverse">
         <Swiper
           pagination={{
             clickable: true,
@@ -63,14 +64,17 @@ export default function Hero({ tagline }) {
           modules={[Keyboard, Pagination, Autoplay]} 
           className="mySwiper mb-4">
             {data && data.slider.map((data, index) => (
-              <SwiperSlide key={index} className={`container ${isScrolled ? 'scrolledKanan' : ''}`}>
-              <img src={data?.image} alt="" className='masonOne max-w-sm rounded-lg shadow-2xl max-h-screen mx-auto  md:block'/>
+              // <SwiperSlide key={index} className={`container ${isScrolled ? 'scrolledKanan' : ''}`}>
+              <SwiperSlide key={index}>
+              {/* <img src={data?.image} alt="" className='masonOne max-w-sm rounded-lg shadow-2xl max-h-screen mx-auto  md:block'/> */}
+              <img src={data?.image} alt="" className='max-w-sm mx-auto rounded-lg shadow-2xl'/>
             </SwiperSlide>
             ))}             
         </Swiper>
 
-        <div className="hero-text text-left md:text-center sm:w-auto p-0">          
-          <h1 className="text-6xl md:text-8xl sm:text-sm font-black hero-title uppercase">{data?.title?.split(' ')[0]}</h1>
+        <div className="hero-text text-left md:text-center">          
+          {/* <h1 className="text-6xl md:text-8xl sm:text-sm font-black hero-title uppercase block lg:hiden">{data?.title?.split(' ')[0]}</h1> */}
+          <h1 className="text-6xl md:text-8xl font-black hero-title uppercase block md:hiden">{data?.title?.split(' ')[0]}</h1>
           {/* <h1 className={`container ${isScrolled ? 'scrolledKiri' : ''} text-6xl md:text-8xl sm:text-8xl font-black hero-title uppercase`}>{data?.title?.split(' ')[0]}</h1> */}
           <h1 className="text-4xl md:text-7xl sm:text-sm font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1>
           {/* <h1 className="text-4xl md:text-7xl sm:text-7xl font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1> */}
@@ -79,7 +83,9 @@ export default function Hero({ tagline }) {
         </div>
       </div>
     </section>
-    <Socials/>
+    <section>
+      <Socials/>
+    </section>
     </>
   )
 }

@@ -113,7 +113,7 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      className="h-[100vh] flex justify-center items-center pt-20"
+      className="h-[100vh] flex justify-center items-center pt-6"
     >
       <div className="contact-wrapper px-20 mx-auto montserrat w-full animate_animated animate__fadeOutUp">
         <h1 className="text-4xl font-bold text-gray-500 uppercase mb-4">

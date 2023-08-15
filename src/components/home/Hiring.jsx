@@ -6,6 +6,8 @@ import { Link, Router } from 'react-router-dom';
 import { motion } from "framer-motion";
 import '../career/felex/View.css';
 import axios from 'axios';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Keyboard, Pagination } from 'swiper';
 
 const hiringList = [
   {
@@ -42,23 +44,23 @@ export default function Hiring() {
     setIsShow(!isShow)
   }
 
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    if (scrollY > 500) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
+  // const handleScroll = () => {
+  //   const scrollY = window.scrollY;
+  //   if (scrollY > 500) {
+  //     setIsVisible(true);
+  //   } else {
+  //     setIsVisible(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   const [data, setData] = useState(null);
   useEffect(() => {
@@ -67,19 +69,20 @@ export default function Hiring() {
       .catch((error) => console.error('Error fetching data:', error));
   }, []); 
 
-  function HiringCard({ id, image, title, url }) {
+  function HiringCard({ id, category, image, title, url }) {
     
-    return (
+    return (      
       <motion.section
         id="career"
         className="h-[80vh] flex justify-center items-center animate_animated animate__bounceInUp"
       >        
-        <div className="card w-full">
+        <div className="card w-full">          
           <figure className="p-1">
             <img src={image} alt="Shoes" className="masonOne rounded-md" />
           </figure>
           <div className="card-body items-start px-0 py-3">
             <h2 className="card-title font-bold text-xl montserrat">{title}</h2>
+            <p>{category}</p>
             <div className="card-actions text-left">
               <button onClick={url} className="btn btn-ghost capitalize font-light text-md p-0 hover:bg-transparent montserrat">
                 <Link to={`/vacancy/${id}`}
@@ -87,47 +90,35 @@ export default function Hiring() {
                   rel='noopener noreferrer'>
                   Apply Now
                 </Link>
-              </button>
-              
+              </button>              
             </div>
-            { 
-                isShow ?
-                <div className='container'>
-                  <ul className='item'>
-                    <li className='btn btn-primary'><Link to={url}>Internship</Link></li>
-                  </ul>
-                  <ul className='item'>
-                    <li><li className='btn btn-success'>Employee</li></li>
-                  </ul>
-                </div>:null
-              }
           </div>
-        </div>
-       
+        </div>       
       </motion.section>
     )
   }
   
   return (
-    <section id="hiring" className="h-[130vh] flex flex-col justify-center items-center pt-0">
-      {isVisible &&(
-        <div className="hiring-title">        
-          <h4 className="font-bold text-4xl montserrat animate_animated animate__bounceInUp">
-            {data?.title}
-          </h4>
-          <h4 className="font-light text-4xl montserrat">{data?.subtitle}</h4>
+    <>
+      <section id="hiring" className="h-[130vh] flex flex-col justify-center items-center pt-30 sm:py-5">     
+          <div className="hiring-title">        
+            <h4 className="font-bold text-4xl montserrat animate_animated animate__bounceInUp">
+              {data?.title}
+            </h4>
+            <h4 className="font-light text-4xl montserrat">{data?.subtitle}</h4>
+            
+          </div>
+        <div className="hiring-content lg:px-32">
+          <div className="grid grid-cols-3 gap-0 sm:mb-8">
+            {/* {data ? data.vacancy.map((data, index) => (
+              <HiringCard key={index} img={data.image} title={data.title} url={data.url} />
+            )) : ''} */}
+              {data && data.vacancy.map((data, index) => (
+              <HiringCard key={data.id} id={data.id} image={data.image} title={data.title} url={data.id} category={data.category}/>
+            ))}
+          </div>
         </div>
-      )}
-      <div className="hiring-content lg:px-32">
-        <div className="grid grid-cols-3 gap-0">
-          {/* {data ? data.vacancy.map((data, index) => (
-            <HiringCard key={index} img={data.image} title={data.title} url={data.url} />
-          )) : ''} */}
-           {data && data.vacancy.map((data, index) => (
-            <HiringCard key={data.id} id={data.id} image={data.image} title={data.title} url={data.id} />
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </>    
   )
 }

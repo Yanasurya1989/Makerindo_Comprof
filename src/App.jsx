@@ -24,16 +24,17 @@ import Setphone from './components/career/setphone/Setphone'
 import Zoom from './components/career/zoomefect/nidex'
 import WA from './components/career/message/Viewform'
 import Dropdown from './components/career/drpodown/Epp'
+import Seemore from './components/career/seemore/Seeview'
+import Detilnews from './components/career/detil/DetailPage'
+import Sampledetil from './components/career/detil/ViewApp'
+import Arrobj from './components/career/arrobj/Arrobj'
+
 import { 
   useQueryClient,
   QueryClient,
   QueryClientProvider, } 
   
 from 'react-query'
-
-
-
-
 
 const router = createBrowserRouter([
   {
@@ -108,6 +109,22 @@ const router = createBrowserRouter([
   {
     path: "/dropdown",
     element: <Dropdown />,
+  },
+  {
+    path: "/seemore",
+    element: <Seemore />,
+  },
+  {
+    path: "/detilnews/:id",
+    element: <Detilnews />,
+  },
+  {
+    path: "/sampledetil",
+    element: <Sampledetil />,
+  },
+  {
+    path: "/arrobj",
+    element: <Arrobj />,
   },
 ]);
 
