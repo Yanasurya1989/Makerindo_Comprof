@@ -1,6 +1,7 @@
 // DetailPage.js
 import React, { useEffect, useState } from 'react';
 import Image from '../../assets/img/gallery/iot.png'
+import './Detil.css'
 
 const DetailPage = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -16,12 +17,12 @@ const DetailPage = () => {
         <>
           <div className='grid grid-cols-1 mx-auto flex justify-center flex-col lg:flex-row items-center'>
             <div>
-              <h1 className='text-left font-bold text-lg mb-10'>{selectedItem.title}</h1>
+              <h1 className='text-left font-bold text-lg mb-10' style={{fontFamily:'roboto'}}>{selectedItem.title}</h1>
               <img src={selectedItem.image} className='w-full h-[50vh] flex justify-center mx-auto lg:h-[70vh]  object-cover'/>
             </div>
             <div>
               
-              <p className='text-left mt-10 font-light'>{selectedItem.description}</p>
+              <p className='text-left mt-10 font-light' style={{fontFamily:'roboto'}}>{selectedItem.description}</p>
             </div>
           </div>
         </>
