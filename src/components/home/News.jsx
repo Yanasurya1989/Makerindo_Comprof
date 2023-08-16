@@ -4,6 +4,7 @@ import { Mousewheel, FreeMode, Keyboard } from "swiper";
 import SeeMoreComponent from '../career/seemore/SeeMoreComponent';
 import 'swiper/css';
 import axios from "axios";
+import '../career/detil/Detil.css'
 
 export default function News() {
   
@@ -47,8 +48,8 @@ export default function News() {
                 <img src={data.image} alt="" className='masonOne img-product h-[50vh] w-full lg:h-[70vh] lg:w-[16rem] object-cover'/>
                 <div className="h-full p-4 lg:p-12">
                   <div className="content-start">
-                    <h3 className="font-bold text-lg mb-2 lg:text-4xl lg:mb-8">{data.title}</h3>
-                    <p className="montserrat text-sm lg:text-base content-start text-left">
+                    <h3 style={{fontFamily:'roboto'}} className="font-bold text-lg mb-2 lg:text-4xl lg:mb-8">{data.title}</h3>
+                    <p style={{fontFamily:'roboto'}} className="text-justify montserrat text-sm lg:text-base">
                       <SeeMoreComponent item={data} content={data.description} maxLength={1350}/>
                     </p>
                     {/* <a href="#">read more</a> */}
