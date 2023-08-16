@@ -18,7 +18,7 @@ function SeeMoreComponent({ item, content, maxLength }) {
   return (
     <div>
       {/* {items.map(item => ( */}
-        <p className='text-left'>
+        <p className='text-justify'>
         {showFullContent ? content : content.slice(0, maxLength)}
         {content.length > maxLength && !showFullContent && (
           <button onClick={seemore}>
