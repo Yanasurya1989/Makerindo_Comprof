@@ -8,7 +8,6 @@ import AppLogo from './components/AppLogo'
 import Career from './components/career/Career'
 import Manager from './components/career/Manager'
 import Ui from './components/career/Ui'
-import List from './components/career/list'
 import Hiring from './pages/Hiring'
 import Message from './components/home/Message'
 import Getmessage from './components/home/Getmessage'
@@ -52,10 +51,6 @@ const router = createBrowserRouter([
   {
     path: "/ui",
     element: <Ui />,
-  },
-  {
-    path: "/list",
-    element: <List />,
   },
   {
     path: "/hiring",
