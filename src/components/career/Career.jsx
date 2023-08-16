@@ -5,7 +5,6 @@ import ApplyCreateModal from "./components/applyCreateModal";
 import ApplyCreateInternshipModal from "./components/applyCreateInternshipModal";
 import applyService from "./utils/service";
 import { useEffect } from "react";
-import List from "./list";
 import style from './style.module.css'
 import uploadCV from "./components/uploadCV";
 import '../career/felex/View.css';
