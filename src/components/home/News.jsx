@@ -49,7 +49,7 @@ export default function News() {
                   <div className="my-auto content-start">
                     <h3 className="font-bold text-lg mb-2 lg:text-4xl lg:mb-8">{data.title}</h3>
                     <p className="montserrat text-sm lg:text-base content-start text-left">
-                      <SeeMoreComponent item={data} content={data.description} maxLength={300}/>
+                      <SeeMoreComponent item={data} content={data.description} maxLength={1200}/>
                     </p>
                     {/* <a href="#">read more</a> */}
                   </div>
