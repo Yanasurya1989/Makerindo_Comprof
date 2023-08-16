@@ -102,9 +102,9 @@ export default function About() {
         </h1>
           {data?.description}
       </div> */}
-      <div className="about-counter flex flex-col justify-center items-center h-[50vh] md:h-[70] relative animate__animated animate__zoomInUp mb-5 pb-10 md:pb-30">
+      <div className="about-counter flex flex-col justify-center items-center h-[70vh] md:h-[70] relative animate__animated animate__zoomInUp mb-5 pb-10 md:pb-30">
         <div className="about-counter-content relative">
-          <div className="absolute top-10 bottom-0 h-full flex items-center w-full">
+          <div className="absolute top-0 bottom-0 h-full flex items-center w-full">
             <h1 className="text-center lg:text-left absolute lg:-right-5 font-bold lg:text-[8rem] uppercase text-gradient-primary opacity-40 text-[20vh] lg:text-[30vh]">About Us</h1>
           </div>
           <p className="about-description z-20 text-center mb-12 text-md mx-35 sm:mt-3">

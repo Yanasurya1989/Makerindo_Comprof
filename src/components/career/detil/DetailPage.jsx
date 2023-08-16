@@ -14,9 +14,9 @@ const DetailPage = () => {
     <div className="detail-container">
       {selectedItem ? (
         <>
-          <div className='grid grid-cols-1 mx-auto flex justify-center'>
+          <div className='grid grid-cols-1 mx-auto flex justify-center flex-col lg:flex-row items-center'>
             <div>
-              <img src={selectedItem.image} className='w-1/4 flex justify-center mx-auto'/>
+              <img src={selectedItem.image} className='w-full h-[50vh] flex justify-center mx-auto lg:h-[70vh]  object-cover lg:w-[50vw]'/>
             </div>
             <div>
               <h1 className='text-left'>{selectedItem.title}</h1>
