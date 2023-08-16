@@ -46,10 +46,10 @@ export default function News() {
               <SwiperSlide key={index} className="flex flex-col lg:flex-row items-center lg:w-[50vw]">
                 <img src={data.image} alt="" className='masonOne img-product h-[50vh] w-full lg:h-[70vh] lg:w-[16rem] object-cover'/>
                 <div className="h-full p-4 lg:p-12">
-                  <div className="my-auto content-start">
+                  <div className="content-start">
                     <h3 className="font-bold text-lg mb-2 lg:text-4xl lg:mb-8">{data.title}</h3>
                     <p className="montserrat text-sm lg:text-base content-start text-left">
-                      <SeeMoreComponent item={data} content={data.description} maxLength={1400}/>
+                      <SeeMoreComponent item={data} content={data.description} maxLength={1350}/>
                     </p>
                     {/* <a href="#">read more</a> */}
                   </div>
