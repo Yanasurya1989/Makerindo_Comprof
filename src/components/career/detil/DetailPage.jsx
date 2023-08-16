@@ -16,8 +16,8 @@ const DetailPage = () => {
         <>
           <div className='grid grid-cols-1 mx-auto flex justify-center flex-col lg:flex-row items-center'>
             <div>
-              <h1 className='text-left font-light font-bold text-lg mb-10'>{selectedItem.title}</h1>
-              <img src={selectedItem.image} className=' lg:w-[16rem] w-full h-[50vh] flex justify-center mx-auto lg:h-[70vh]  object-cover'/>
+              <h1 className='text-left font-bold text-lg mb-10'>{selectedItem.title}</h1>
+              <img src={selectedItem.image} className=' w-full h-[50vh] flex justify-center mx-auto lg:h-[70vh]  object-cover'/>
             </div>
             <div>
               
