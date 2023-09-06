@@ -21,17 +21,41 @@
   /* text-align: center; */
   height: 100%;
   background-color: #00000056;
-  padding: 50% 25% 50% 25%;
+  /* padding: 50% 25% 50% 25%; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  text-decoration: none;
+}
 
+button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+button p{
+  color: white;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
 }
 
 .hidden-content button{
   align-items: center;
   text-align: center;
+  text-decoration: none;
 }
 
+.tekset {
+  color: white;
+  text-decoration: none;
+}
 /* .img-product:hover{
   background: red;
 } */

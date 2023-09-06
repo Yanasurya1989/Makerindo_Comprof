@@ -27,7 +27,7 @@ export default function Gallery() {
 
   // console.log(data.comptency[0])
   return (
-    <section id='gallery' className="w-full flex flex-row relative pt-0">
+    <section id='gallery' className="w-full flex flex-row relative pt-0 sm:pt-10">
       <div className="gallery-title absolute -left-4 -top-4 lg:left-0 lg:top-0 lg:bottom-6 rotate-180" style={{ writingMode: 'vertical-rl' }}>
         <h2 className="animate__animated animate__fadeIn font-bold text-4xl lg:text-5xl uppercase w-full text-gradient-primary ">
           {data?.title}

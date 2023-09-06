@@ -37,7 +37,7 @@ export default function Products() {
   return (
     <div 
       id="products" 
-      className="h-full lg:h-[100vh] py-16 animate__animated animate__fadeIn hoverable product"
+      className="no-underline h-full lg:h-[100vh] py-16 animate__animated animate__fadeIn hoverable product"
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}>
       
@@ -53,7 +53,7 @@ export default function Products() {
         }}
         spaceBetween={10}
         autoplay={{
-          delay:3000,
+          delay:5000,
           disableOnInteraction:(false)
         }}
         scrollbar={{draggable: true}}
@@ -63,15 +63,15 @@ export default function Products() {
           
         {data && data.product.map((data, index) => (
           <SwiperSlide key={index}>
-            <img  src={data?.image} alt="" className='masonOne img-product'/>
+            <img  src={data?.image} alt="" className='masonOne img-product no-underline'/>
             {isHovering && <a 
               href={data.link}
               target='_blank'
               rel='noopener noreferrer' 
               className="hidden-content"
             >              
-              <button className='btn btn-info flex center'>
-                Show detil
+              <button className='flex center mx-auto text-2xl text uppercase'>
+                <p className='no-underline hover:underline'>Show Detil</p>
               </button>              
             </a>}              
           </SwiperSlide> 
@@ -80,4 +80,3 @@ export default function Products() {
     </div>
   )
 }
-

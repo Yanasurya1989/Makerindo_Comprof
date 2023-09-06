@@ -70,24 +70,25 @@ export default function About() {
       <>
         <div className="about-title flex justify-center items-center h-screen hidden md:flex  animate__animated animate__backInUp h-[130vh]  py-1.5 md:mt-4">
           <div>
-            <h1 className="uppercase text-center font-bold lg:text-8xl text-gradient-primary">
-              {/* About Us */}
-            </h1> 
+            {/* <h1 className="uppercase text-center font-bold lg:text-8xl text-gradient-primary">
+              About Us
+            </h1>  */}
             {/* {
               isVisibleTitle &&(
               )
             } */}
             {/* {
                isVisible && ( */}
-                <div className="about-video flex flex-col justify-center items-center h-screen md:my-6">
-                  <h1 className="uppercase text-center font-bold text-4xl text-gradient-primary mb-1 md:hidden">
+                <div className="about-video flex flex-col justify-center items-center h-screen md:my-6 mt-24">
+                  {/* <h1 className="uppercase text-center font-bold text-4xl text-gradient-primary mb-1 md:hidden">
                     About Us
-                  </h1>
+                  </h1> */}
                   
                   <Youtube
                     videoId={data?.videoId}
                     opts={aboutVideoOpts}
-                    iframeClassName="w-[90vh] lg:h-[90vh] lg:w-[80vw] md:h"
+                    iframeClassName="w-full lg:w-[80vw] md:w-[60vw] lg:h-[90vh]"
+                    // iframeClassName="w-[90vh] lg:h-[90vh] lg:w-[80vw] md:h"
                   />
                 </div>
                 {/* )       */}
@@ -105,7 +106,7 @@ export default function About() {
       <div className="about-counter flex flex-col justify-center items-center h-[70vh] md:h-[70] relative animate__animated animate__zoomInUp mb-5 pb-10 md:pb-30">
         <div className="about-counter-content relative">
           <div className="absolute top-0 bottom-0 h-full flex items-center w-full">
-            <h1 className="text-center lg:text-left absolute lg:-right-5 font-bold lg:text-[8rem] uppercase text-gradient-primary opacity-40 text-[20vh] lg:text-[30vh]">About Us</h1>
+            <h1 className="text-8xl text-center lg:text-left absolute lg:-right-5 font-bold text-[4rem] lg:text-[8rem] uppercase text-gradient-primary opacity-40 text-[20vh] lg:text-[30vh]">About Us</h1>
           </div>
           <p className="about-description z-20 text-center mb-12 text-md mx-35 sm:mt-3">
             {data?.description}
@@ -115,19 +116,23 @@ export default function About() {
           </h2>
           <div className="counter grid grid-cols-4 gap-4">
             <div className="counter-team text-center montserrat">
-              <h1 className="text-2xl md:text-8xl font-bold">{data?._count?.team}+</h1>
+              <h1 className="text-2xl md:text-8xl font-bold">20+</h1>
+              {/* <h1 className="text-2xl md:text-8xl font-bold">{data?._count?.team}+</h1> */}
               <p className="text-md md:text-lg">Team</p>
             </div>
             <div className="counter-project text-center montserrat">
-              <h1 className="text-2xl md:text-8xl font-bold">{data?._count?.project}+</h1>
+              <h1 className="text-2xl md:text-8xl font-bold">40+</h1>
+              {/* <h1 className="text-2xl md:text-8xl font-bold">{data?._count?.project}+</h1> */}
               <p className="text-md md:text-lg">projects in year</p>
             </div>
             <div className="counter-client text-center montserrat">
-              <h1 className="text-2xl md:text-8xl font-bold">{data?._count?.client}+</h1>
+              <h1 className="text-2xl md:text-8xl font-bold">20+</h1>
+              {/* <h1 className="text-2xl md:text-8xl font-bold">{data?._count?.client}+</h1> */}
               <p className="text-md md:text-lg">Client</p>
             </div>
             <div className="counter-partner text-center montserrat">
-              <h1 className="text-2xl md:text-8xl font-bold">{data?._count?.partner}+</h1>
+              <h1 className="text-2xl md:text-8xl font-bold">25+</h1>
+              {/* <h1 className="text-2xl md:text-8xl font-bold">{data?._count?.partner}+</h1> */}
               <p className="text-md md:text-lg">Partner</p>
             </div>
           </div>

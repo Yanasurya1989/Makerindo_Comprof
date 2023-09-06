@@ -74,11 +74,11 @@ export default function Hiring() {
     return (      
       <motion.section
         id="career"
-        className="h-[80vh] flex justify-center items-center animate_animated animate__bounceInUp"
+        className="h-[100] lg:h-[80vh] flex justify-center items-center animate_animated animate__bounceInUp"
       >        
         <div className="card w-full">          
           <figure className="p-1">
-            <img src={image} alt="Shoes" className="masonOne rounded-md" />
+            <img src={imgWebdev} alt="Shoes" className="masonOne rounded-md" />
           </figure>
           <div className="card-body items-start px-0 py-3">
             <h2 className="card-title font-bold text-xl montserrat">{title}</h2>
@@ -100,7 +100,7 @@ export default function Hiring() {
   
   return (
     <>
-      <section id="hiring" className="h-[130vh] flex flex-col justify-center items-center pt-30 sm:py-5">     
+      <section id="hiring" className="h-full lg:h-[100vh] flex flex-col justify-center items-center md:mb-10 sm:">     
           <div className="hiring-title">        
             <h4 className="font-bold text-4xl montserrat animate_animated animate__bounceInUp">
               {data?.title}
@@ -109,7 +109,7 @@ export default function Hiring() {
             
           </div>
         <div className="hiring-content lg:px-32">
-          <div className="grid grid-cols-3 gap-0 sm:mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 sm:mb-5 h-full mt-20">
             {/* {data ? data.vacancy.map((data, index) => (
               <HiringCard key={index} img={data.image} title={data.title} url={data.url} />
             )) : ''} */}

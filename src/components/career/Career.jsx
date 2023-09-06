@@ -59,7 +59,7 @@ const Career = () => {
     }, []); 
     // fetching end
 
-    return <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 flex justify-center container mx-auto px-30 pt-35">
+    return <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 flex justify-center container mx-auto px-30 pt-35 mt-14 mb-20">
         {data && (          
             <>
                 <div>

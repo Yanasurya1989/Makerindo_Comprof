@@ -27,6 +27,10 @@ import Seemore from './components/career/seemore/Seeview'
 import Detilnews from './components/career/detil/DetailPage'
 import Sampledetil from './components/career/detil/ViewApp'
 import Arrobj from './components/career/arrobj/Arrobj'
+import Hera from './components/career/hero/Hero'
+import HeroNews from './components/career/heroNews/HeroNews'
+import HeroSlide from './components/career/hero/fixing_slide/Hero'
+import SlideNew from './components/career/slide/Hero_slide'
 
 import { 
   useQueryClient,
@@ -120,6 +124,22 @@ const router = createBrowserRouter([
   {
     path: "/arrobj",
     element: <Arrobj />,
+  },
+  {
+    path: "/hera",
+    element: <Hera />,
+  },
+  {
+    path: "/heroSlide",
+    element: <HeroSlide />,
+  },
+  {
+    path: "/slideShow",
+    element: <SlideNew />,
+  },
+  {
+    path: "/heroNews",
+    element: <HeroNews />,
   },
 ]);
 

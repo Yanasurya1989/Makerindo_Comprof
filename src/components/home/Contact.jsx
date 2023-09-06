@@ -113,9 +113,9 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      className="h-[100vh] flex justify-center items-center pt-6"
+      className="h-full flex justify-center items-center pt-6"
     >
-      <div className="contact-wrapper px-20 mx-auto montserrat w-full animate_animated animate__fadeOutUp">
+      <div className="contact-wrapper mx-auto montserrat w-full animate_animated animate__fadeOutUp">
         <h1 className="text-4xl font-bold text-gray-500 uppercase mb-4">
           Contact Us
         </h1>
@@ -128,7 +128,7 @@ export default function Contact() {
         }
           
         <form action="" onSubmit={handleSubmit} method="post" className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-1 w-full">
-          <div className="left-column p-4">
+          <div className="left-column">
             {/* <InputForm /> */}
             <div className="form-control w-full mb-2">
               <label htmlFor="phone" className="label">

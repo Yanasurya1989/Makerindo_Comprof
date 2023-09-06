@@ -80,7 +80,7 @@ export default function Hero({ tagline }) {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1>
             {/* <h1 className="text-4xl md:text-7xl sm:text-7xl font-black text-white hero-subtitle uppercase">{data?.title?.split(' ')[1]} {data?.title?.split(' ')[2]}</h1> */}
             {/* <p className={`container ${isScrolled ? 'scrolledKiri' : ''}  hero-tagline uppercase`}>{data?.subtitle}</p> */}
-            <p className="hero-tagline text-2xl md:text-6xl lg:text-4xl pt-3 font-black">{data?.subtitle}</p>
+            <p className="hero-tagline text-2xl md:text-4xl lg:text-4xl pt-3 font-black">{data?.subtitle}</p>
           </div>
         </div>
       </div>

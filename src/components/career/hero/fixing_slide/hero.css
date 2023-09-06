@@ -1,0 +1,15 @@
+.container 
+
+.kanan {
+    background-color: greenyellow;
+    /* width: 75%;
+    height: 500px; */
+    
+}
+
+.kiri {
+    background-color: salmon;
+    /* width: 25%;
+    height: 500px; */
+    /* background-image: url(../../../assets/img/news/boost-productivity.png); */
+}

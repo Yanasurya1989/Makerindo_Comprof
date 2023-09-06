@@ -9,13 +9,16 @@ import Products from "../components/home/Products";
 import News from "../components/home/News";
 import Hiring from "../components/home/Hiring";
 import Contact from "../components/home/Contact";
+import Hera from '../components/career/hero/Hero'
+import './Home.css'
 import Fullpage, {FullPageSections, FullpageSection, FullpageNavigation} from '@ap.cx/react-fullpage';
 
 export default function Home() {
   return (
     <>
-      <div id="fullpage">
-        <div className="section active"><Hero /></div>
+      <div id="fullpage" className="grid grid-cols-1">
+        <div className="section active"><Hera /><div class="clearLeft"></div></div>
+        
         <div className="section"><About/></div>
         <div className="section"><Gallery/></div>
         <div className="section"><Products/></div>
